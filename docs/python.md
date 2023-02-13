@@ -20,3 +20,13 @@ with matplotlib.rc_context({'font.family':'Arial', 'font.size': 15}):
     # plots, plots, and plots
     # whenever necessary shove in `fontproperties=fontprop` into a function
 ```
+
+## Easy way of appending a row to a DataFrame
+```python
+df = pd.DataFrame(columns=['A', 'B', 'count'])
+for ix, val in enumerate(some_data):
+    A = some_data.do_something()
+    B = some_data.do_something_else()
+    count = count_dict[(A, B)]
+    df.loc[ix] = [A, B, count] # best to use loc here
+```
