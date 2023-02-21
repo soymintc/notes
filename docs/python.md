@@ -30,3 +30,14 @@ for ix, val in enumerate(some_data):
     count = count_dict[(A, B)]
     df.loc[ix] = [A, B, count] # best to use loc here
 ```
+
+## Run `bash` script in python foreground
+```python
+subprocess.run(["ls", "-l"]) # no output capture
+subprocess.run(["ls", "-l", "/dev/null"], capture_output=True) # capture stdout
+```
+```python
+# subprocess.run 
+subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)
+```
+
