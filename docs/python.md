@@ -34,6 +34,7 @@ for ix, val in enumerate(some_data):
 ## Run `bash` script in python foreground
 ```python
 subprocess.run(["ls", "-l"]) # no output capture
+subprocess.run("ls -l", shell=True) # using shell argument
 subprocess.run(["ls", "-l", "/dev/null"], capture_output=True) # capture stdout
 ```
 ```python
@@ -41,3 +42,9 @@ subprocess.run(["ls", "-l", "/dev/null"], capture_output=True) # capture stdout
 subprocess.run(args, *, stdin=None, input=None, stdout=None, stderr=None, capture_output=False, shell=False, cwd=None, timeout=None, check=False, encoding=None, errors=None, text=None, env=None, universal_newlines=None, **other_popen_kwargs)
 ```
 
+## Easy build and upload to `pypi` after writing setup.py
+```bash
+python setup.py sdist bdist_wheel
+pytest # if test files written
+twine upload dist/*
+````
