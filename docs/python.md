@@ -8,7 +8,8 @@ Personal cheatsheet
 mpl_cache_dir=~/chois7/.cache/matplotlib
 [ -d $mpl_cache_dir ] && { echo "$mpl_cache_dir exists - removing it"; rm -rf $mpl_cache_dir; }
 ```
-3. Plug in the font using matplotlib fontmanager
+3. Run `fc-cache` in the directory you have .ttf files in, and then `fc-list` to check
+4. Plug in the font using matplotlib fontmanager
 ```python
 import matplotlib.font_manager as font_manager
 arial_path = "/path/to/Arial.ttf"
