@@ -49,3 +49,20 @@ python setup.py sdist bdist_wheel
 pytest # if test files written
 twine upload dist/*
 ````
+
+## Find value changes in a pandas DataFrame
+```python
+cn["state_change"] = (cn["state"].shift(1, fill_value=cn["state"].head(1).squeeze()) != cn["state"])
+```
+
+## Adding two separate custom legends to pyplot Axes
+```python
+handle1 = [plt.plot([], [], 
+           color=colors[label], marker="o", ms=4, ls="")[0] for label in colors]
+legend1 = ax.legend(handles=handle1, labels=colors.keys(), title="Color labels")
+ax.add_artist(legend1);
+handle2 = [plt.plot([], [], 
+           color="gray", marker="o", ms=2, ls="")[0]]
+legend2 = ax.legend(handles=handle2, labels=[''], title="Background", loc=(0.823,0.50))
+ax.add_artist(legend2);
+```
