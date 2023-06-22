@@ -74,3 +74,13 @@ df = df.reset_index(drop=True)
 df[index_cols] = df[index_cols].astype(str) # or category
 # only then do a groupby operation
 ```
+
+## Change pyplot background colors
+Usually I want the figure and savefig facecolor to be (1.0, 1.0, 1.0, 1.0)
+```python
+plt.rcParams.update({
+    "axes.facecolor":    (0.0, 1.0, 0.0, 0.5),  # figure main background color
+    "figure.facecolor":  (1.0, 0.0, 0.0, 0.3),  # applied for .show()
+    "savefig.facecolor": (0.0, 0.0, 1.0, 0.2),  # applied for .savefig()
+})
+```
