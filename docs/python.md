@@ -66,3 +66,11 @@ handle2 = [plt.plot([], [],
 legend2 = ax.legend(handles=handle2, labels=[''], title="Background", loc=(0.823,0.50))
 ax.add_artist(legend2);
 ```
+
+## How to fix pd.DataFrame.groupby row duplication bugs
+```python
+df = df.drop_duplicates()
+df = df.reset_index(drop=True)
+df[index_cols] = df[index_cols].astype(str) # or category
+# only then do a groupby operation
+```
