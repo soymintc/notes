@@ -30,3 +30,10 @@ git revert --no-commit 0766c053..HEAD
 git commit
 ```
 
+# Purging sensitive files from history
+First install `git-filter-repo`
+```bash
+git-filter-repo --path /paths/to/results --invert-paths -f  # without -f will get no-fresh-clone error
+git remote set origin http://url/of/origin  # somehow remote seems to be removed
+git push origin this_branch -f
+```
