@@ -9,7 +9,7 @@ glue(f'hello {name}')
 ```
 
 ## Print multiple arrangeGrob plots in different pages of one PDF file
-```
+```R
 # Load required libraries
 library(ggplot2)
 library(gridExtra)
@@ -49,4 +49,9 @@ grid::grid.draw(plot.new()) # plot empty plot
 
 # Close the device
 dev.off()
+```
+
+# Get value counts of a column
+```R
+some_dataframe %>% dplyr::count(some_column)
 ```
