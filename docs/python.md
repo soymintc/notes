@@ -84,3 +84,17 @@ plt.rcParams.update({
     "savefig.facecolor": (0.0, 0.0, 1.0, 0.2),  # applied for .savefig()
 })
 ```
+
+## Sphinx-compatible function docstrings
+```python
+"""[Summary]
+
+:param [ParamName]: [ParamDescription], defaults to [DefaultParamVal]
+:type [ParamName]: [ParamType](, optional)
+...
+:raises [ErrorType]: [ErrorDescription]
+...
+:return: [ReturnDescription]
+:rtype: [ReturnType]
+"""
+```
