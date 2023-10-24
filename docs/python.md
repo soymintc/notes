@@ -98,3 +98,9 @@ plt.rcParams.update({
 :rtype: [ReturnType]
 """
 ```
+
+## `tqdm` for pandas
+```python
+for ix, row in tqdm(df.iterrows(), total=df.shape[0]):
+    # do something
+```
