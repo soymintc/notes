@@ -5,7 +5,7 @@ Personal cheatsheet
 ### On the server
 ```bash
 PORT_SERVER=9988
-jupyter lab --no-browser --port=$PORT_SERVER --ip "*"
+jupyter lab --no-browser --port=$PORT_SERVER --ip 0
 ```
 ### On local
 ```bash
@@ -56,4 +56,9 @@ bt     debug      j         pdoc      return   u
 c      disable    jump      pfile     retval   unalias        
 cl     display    l         pinfo     run      undisplay      
 clear  down       list      pinfo2    rv       unt
+```
+
+## Convert .ipynb to .md
+```bash
+jupytext --to markdown notebook.ipynb
 ```
