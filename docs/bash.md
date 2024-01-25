@@ -11,3 +11,9 @@ sed -i 's/pat1/pat2/g' some_file_to_overwrite.txt # file
 ```bash
 namei -l /path/to/file
 ```
+
+## Customize bjobs display
+```bash
+# WHAT-TO-DISPLAY:NUMBER_OF_CHRACTERS
+bjobs -o "JOBID:10 SUBMIT_TIME:13 USER:5 STAT:5 QUEUE:6 EXEC_HOST:20 JOB_NAME"
+```
