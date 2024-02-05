@@ -17,3 +17,9 @@ namei -l /path/to/file
 # WHAT-TO-DISPLAY:NUMBER_OF_CHRACTERS
 bjobs -o "JOBID:10 SUBMIT_TIME:13 USER:5 STAT:5 QUEUE:6 EXEC_HOST:20 JOB_NAME"
 ```
+
+## User-specific cache location
+```bash
+echo $XDG_CACHE_HOME  # you can set and export this in ~/.profile
+                      # snakemake also looks for this cache directory
+```
