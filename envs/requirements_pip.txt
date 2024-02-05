@@ -1,0 +1,17 @@
+anndata
+biopython
+bokeh
+fonttools
+ipython
+jupyterlab
+matplotlib
+numpy
+pyarrow
+pyfaidx
+pysam
+pysftp
+pyyaml
+seaborn
+synapseclient
+tqdm
+visidata
