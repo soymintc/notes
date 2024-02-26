@@ -1,15 +1,18 @@
 adjustText
 anndata
+beautifulsoup4
 biopython
 bokeh
 brewer2mpl
 cyvcf2
+fastq
 fonttools
 intervaltree
 ipython
 jupyter
 jupyterlab
 jupytext
+logomaker
 matplotlib
 matplotlib_venn
 numpy
@@ -23,6 +26,7 @@ pyyaml
 scikit-learn
 seaborn
 slack_sdk
+swalign
 synapseclient
 tqdm
 umap-learn
