@@ -55,3 +55,12 @@ dev.off()
 ```R
 some_dataframe %>% dplyr::count(some_column)
 ```
+
+# Setting .libPaths() when using Rstudio in a container
+```bash
+echo '.libPaths(c("/path/to/your/writable/directory", .libPaths()))' >> ~/.Rprofile
+```
+or
+```R
+.libPaths(c("/path/to/your/writable/directory", .libPaths())) # temporary
+```
