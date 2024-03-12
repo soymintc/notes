@@ -62,3 +62,9 @@ clear  down       list      pinfo2    rv       unt
 ```bash
 jupytext --to markdown notebook.ipynb
 ```
+
+## Fix `Fail to get yarn configuration. internal/modules/cjs/loader.js:638` error when launching jupyter
+1. Download the latest node.js tarball
+2. Untar
+3. Add `node` path to `$PATH`, but by prefixing the bin path (e.g. `PATH=/path/to/node/bin:$PATH`)
+4. Relaunch jupyter lab

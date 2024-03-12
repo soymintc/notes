@@ -15,6 +15,7 @@ jupytext
 logomaker
 matplotlib
 matplotlib_venn
+miniFasta
 numpy
 pyarrow
 pybedtools
@@ -23,6 +24,7 @@ pyranges
 pysam
 pysftp
 pyyaml
+scanpy
 scikit-learn
 seaborn
 slack_sdk

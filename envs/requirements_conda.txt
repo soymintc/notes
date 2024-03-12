@@ -2,3 +2,4 @@ bwa
 ncurses
 samtools
 snakemake
+tree
