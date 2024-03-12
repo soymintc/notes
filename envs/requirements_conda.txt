@@ -1,4 +1,6 @@
 bwa
+gatk4
+git
 ncurses
 samtools
 snakemake
