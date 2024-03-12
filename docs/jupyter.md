@@ -60,7 +60,7 @@ clear  down       list      pinfo2    rv       unt
 
 ## Convert .ipynb to .md
 ```bash
-jupytext --to markdown notebook.ipynb
+jupytext --to markdown notebook.ipynb  # creates notebook.md in target dir
 ```
 
 ## Fix `Fail to get yarn configuration. internal/modules/cjs/loader.js:638` error when launching jupyter
