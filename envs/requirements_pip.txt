@@ -23,6 +23,7 @@ pyfaidx
 pyranges
 pysam
 pysftp
+pyvcf3
 pyyaml
 scanpy
 scikit-learn
