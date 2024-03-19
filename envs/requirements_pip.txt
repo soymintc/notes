@@ -12,6 +12,7 @@ ipython
 jupyter
 jupyterlab
 jupytext
+leidenalg
 logomaker
 matplotlib
 matplotlib_venn

@@ -1,3 +1,4 @@
+bcftools
 bwa
 gatk4
 git
