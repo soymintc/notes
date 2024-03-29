@@ -109,3 +109,9 @@ for ix, row in tqdm(df.iterrows(), total=df.shape[0]):
 1. Go to your `$VENV/lib`
 2. Remove `libstdc++.so` and `libstdc++.so.6` if linked to `libstdc++.so.6.0.21`, replace with `libstdc++.so.6.0.32`
 
+
+## Set argparse bool flag
+The following allows a flag to be set to `True` only when the flag is used
+```python
+p.add_argument('--flag', help='bool flag', default=False, action='store_true')
+```
