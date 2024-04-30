@@ -106,6 +106,8 @@ for ix, row in tqdm(df.iterrows(), total=df.shape[0]):
 ```
 
 ## Fix `libstdc++.so.6: version 'GLIBCXX_3.4.29' not found` issue
-1. Go to your `$VENV/lib`
-2. Remove `libstdc++.so` and `libstdc++.so.6` if linked to `libstdc++.so.6.0.21`, replace with `libstdc++.so.6.0.32`
-
+You could type in the following in your shell, or add into your rc file:
+```bash
+find /path/to/your/env -name libstdc++.so.6`
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/your/env/lib
+```
