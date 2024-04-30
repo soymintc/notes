@@ -115,3 +115,17 @@ The following allows a flag to be set to `True` only when the flag is used
 ```python
 p.add_argument('--flag', help='bool flag', default=False, action='store_true')
 ```
+
+## Relative imports for `pytest`
+1. Make sure `pytest` has been installed in your environment. Else a `pytest` binary installed in some other weird or default environment can screw things up, e.g. giving `ModuleNotFound` errors.
+2. Say under the project root directory, there are `src/` and  `tests/` directories, and `tests/test_something.py` imports something from `src/`. Then add `__init__.py` to all the directories.
+3. From `tests/test_something.py`, import a package in `src/` as follows `from src.something import module_to_test`
+
+## `read_csv` from Google spreadsheets
+By far the following is the best way to open public spreadsheets
+```python
+sheet_id = "1ckIGloNHblgtfNyzC65TenCzcKxIMAw4C5xbzAIzio4"
+gid = '1256376105'
+url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&gid={gid}"
+df = pd.read_csv(url, on_bad_lines='warn')
+```
