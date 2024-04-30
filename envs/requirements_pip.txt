@@ -24,6 +24,8 @@ pyfaidx
 pyranges
 pysam
 pysftp
+pytabix
+pytest
 pyvcf3
 pyyaml
 scanpy
