@@ -37,3 +37,13 @@ git-filter-repo --path /paths/to/results --invert-paths -f  # without -f will ge
 git remote set origin http://url/of/origin  # somehow remote seems to be removed
 git push origin this_branch -f
 ```
+
+# Pull LFS
+When you pull a repo and you only get metadata for the data files, `git lfs` could be a solution
+```bash
+mamba install -y git-lfs # if you don't have it
+git clone $REPO
+cd /path/to/repo
+git lfs install
+git lfs pull
+```
