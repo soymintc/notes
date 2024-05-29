@@ -51,12 +51,12 @@ grid::grid.draw(plot.new()) # plot empty plot
 dev.off()
 ```
 
-# Get value counts of a column
+## Get value counts of a column
 ```R
 some_dataframe %>% dplyr::count(some_column)
 ```
 
-# Setting .libPaths() when using Rstudio in a container
+## Setting .libPaths() when using Rstudio in a container
 ```bash
 echo '.libPaths(c("/path/to/your/writable/directory", .libPaths()))' >> ~/.Rprofile
 ```

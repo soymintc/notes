@@ -131,3 +131,35 @@ gid = '1256376105'
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&gid={gid}"
 df = pd.read_csv(url, on_bad_lines='warn')
 ```
+
+## Some notes about `click`
+- Structure
+```python
+@click.command()
+@click.option('-i', '--input', required=True, help="input file")
+def some_function(input):
+    foo = 1
+    bar = process_arg(foo)
+    return bar
+if __name__ == "__main__":
+    some_function()
+```
+- Option for multiple inputs
+To be used as `python script.py --bam 1.bam --bam 2.bam`
+```python
+@click.option('--bam', multiple=True, help="input tumor bam path(s)")
+```
+- Option for setting types and default values
+```python
+@click.option('--cutoff', type=int, default=1, help="support cutoff")
+```
+- Option used as flag
+```python
+@click.option('--verbose', '-v', is_flag=True, help="print more output")
+```
+
+## Customize pylint
+Generate a pylint rc file, then edit e.g. disable part to remove `E\d{4}` errors
+```bash
+pylint --generate-rcfile > ~/.pylintrc
+```

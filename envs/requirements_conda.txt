@@ -1,5 +1,6 @@
 bcftools
 bwa
+dot
 gatk4
 git
 ncurses

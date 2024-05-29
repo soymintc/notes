@@ -4,6 +4,7 @@ beautifulsoup4
 biopython
 bokeh
 brewer2mpl
+click
 cyvcf2
 fastq
 fonttools
