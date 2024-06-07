@@ -163,3 +163,12 @@ Generate a pylint rc file, then edit e.g. disable part to remove `E\d{4}` errors
 ```bash
 pylint --generate-rcfile > ~/.pylintrc
 ```
+
+## Packaging
+Bare bones of packaging a project, but still basing on 2024 standards.
+1. Generate a `pyproject.toml`, e.g. https://github.com/shahcompbio/ontmont/blob/main/pyproject.toml
+2. Make a requirements file from the source directory. I found `pipreqs . > requirements.txt` pleasing to use
+3. Add a shim `setup.py` for `setuptools`, e.g. https://github.com/shahcompbio/ontmont/blob/main/setup.py
+4. Build into dist: `python -m build`. Remember to check your project version before doing this
+5. Test publishing to TestPyPi: `twine upload --repository testpypi dist/*`. Before doing this and the PyPi publishing below, make sure to have your API tokens saved in your PyPi rc file, e.g. `~/.pypirc`. You also don't want your files to be read by others, so `chmod 600 ~/.pypirc` before anything
+6. If feeling lucky, publish to PyPi `twine upload --repository pypi dist/*`
