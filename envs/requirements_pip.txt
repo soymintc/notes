@@ -33,10 +33,13 @@ pyyaml
 scanpy
 scikit-learn
 seaborn
+setuptools
+setuptools_scm
 slack_sdk
 swalign
 synapseclient
 tqdm
+twine
 umap-learn
 visidata
 wgs_analysis

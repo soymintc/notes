@@ -1,9 +1,12 @@
 bcftools
 bwa
 dot
+ensembl-vep
 gatk4
 git
+htslib
 ncurses
 samtools
 snakemake
 tree
+ucsc-liftover
