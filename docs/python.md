@@ -170,5 +170,5 @@ Bare bones of packaging a project, but still basing on 2024 standards.
 2. Make a requirements file from the source directory. I found `pipreqs . > requirements.txt` pleasing to use
 3. Add a shim `setup.py` for `setuptools`, e.g. https://github.com/shahcompbio/ontmont/blob/main/setup.py
 4. Build into dist: `python -m build`. Remember to check your project version before doing this
-5. Test publishing to TestPyPi: `twine upload --repository testpypi dist/*`. Before doing this and the PyPi publishing below, make sure to have your API tokens saved in your PyPi rc file, e.g. `~/.pypirc`. You also don't want your files to be read by others, so `chmod 600 ~/.pypirc` before anything
-6. If feeling lucky, publish to PyPi `twine upload --repository pypi dist/*`
+5. Test publishing to TestPyPI: `twine upload --repository testpypi dist/*`. Before doing this and the PyPI publishing below, make sure to have your API tokens saved in your PyPI rc file, e.g. `~/.pypirc`. You also don't want your files to be read by others, so `chmod 600 ~/.pypirc` before anything
+6. If feeling lucky, publish to PyPI: `twine upload --repository pypi dist/*`
