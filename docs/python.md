@@ -172,3 +172,11 @@ Bare bones of packaging a project, but still basing on 2024 standards.
 4. Build into dist: `python -m build`. Remember to check your project version before doing this
 5. Test publishing to TestPyPI: `twine upload --repository testpypi dist/*`. Before doing this and the PyPI publishing below, make sure to have your API tokens saved in your PyPI rc file, e.g. `~/.pypirc`. You also don't want your files to be read by others, so `chmod 600 ~/.pypirc` before anything
 6. If feeling lucky, publish to PyPI: `twine upload --repository pypi dist/*`
+
+## ReadTheDocs setup with `sphinx`
+- The backbone of setups are in https://sphinx-rtd-tutorial.readthedocs.io/en/latest/build-the-docs.html
+- Some changes that I learned the hard way:
+    1. Make a separate `requirements.txt` that includes your custom modules that allow the readthedocs server to build your page (e.g. `cat docs/requirements.txt` showing `pydata-sphinx-theme`)
+    2. Make sure `.readthedocs.yaml` at the project root points to the `docs/requirements.txt` file
+    3. Set up custom settings in `docs/conf.py`, e.g. following napoleon settings: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
+    4. The `sys.path.insert(0, os.path.abspath('../'))` line in `docs/conf.py` should point to the parent directory of the target module for documentation
