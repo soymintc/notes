@@ -23,3 +23,21 @@ bjobs -o "JOBID:10 SUBMIT_TIME:13 USER:5 STAT:5 QUEUE:6 EXEC_HOST:20 JOB_NAME"
 echo $XDG_CACHE_HOME  # you can set and export this in ~/.profile
                       # snakemake also looks for this cache directory
 ```
+
+## `rsync` selectively
+- `z` for zip
+- `a` for keep file permission/modification times
+- `r` for recursive lookup
+- `v` for verbose
+- `m` for prune empty directories
+- [`n` for dryrun]
+- `--include='*/'` is absolutely necessary to not filter out directories that don't necessarily match the following include patterns.
+```bash
+rsync -zarvm \
+  --include='*/' \
+  --include='*.expression_filtered.tsv' \
+  --include='*.filtered.tsv' \
+  --exclude="*" \
+  chois7@islogin01.mskcc.org:${SOURCE_DIR}/ \
+  ${DESTINATION_DIR}/
+```
