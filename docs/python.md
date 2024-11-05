@@ -197,3 +197,9 @@ Bare bones of packaging a project, but still basing on 2024 standards.
     2. Make sure `.readthedocs.yaml` at the project root points to the `requirements.txt` file
     3. Set up custom settings in `docs/conf.py`, e.g. following napoleon settings: https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html
     4. The `sys.path.insert(0, os.path.abspath('../'))` line in `docs/conf.py` should point to the parent directory of the target module for documentation
+
+## Join selected columns of a DataFrame
+```python
+cols = ['foo', 'bar', 'viz']
+df['combined'] = df[cols].apply(lambda row: '_'.join(row.values.astype(str)), axis=1)
+```
