@@ -26,3 +26,12 @@ Do:
 ```bash
 docker login
 ```
+
+### Resolving environmental variable collision
+Since singularity inherits `env` variables by default while docker does not, some docker containers that depend on its own environment variables can show weird behaviors when run with singularity. Below is an example:
+```bash
+Illegal option --
+
+Usage: /usr/bin/which [-a] args
+```
+Such collision can be resolved by putting in `--cleanenv` after either `singularity exec` or `singularity run`.
