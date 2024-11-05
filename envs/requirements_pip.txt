@@ -6,6 +6,7 @@ bokeh
 brewer2mpl
 click
 cyvcf2
+emoji
 fastq
 fisher
 fonttools
