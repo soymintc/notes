@@ -17,8 +17,8 @@ ssh -L $PORT_SERVER:localhost:$PORT_LOCAL <MY_ID>@<SERVER_ADDRESS>
 ## Reload packages without referring to jupyter cache
 Run the following magic upstream
 ```python
-%load_ext autoreload
-%autoreload 2
+%load_ext autoreload # enables autoreload
+%autoreload 2        # autoreload all packages upon import
 ```
 Another way to do it (not so recommended) is:
 ```python
