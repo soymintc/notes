@@ -24,7 +24,7 @@ numpy
 pyarrow
 pybedtools
 pyfaidx
-pyliftover
+liftover
 pyranges
 pysam
 pysftp
