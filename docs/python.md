@@ -108,7 +108,7 @@ for ix, row in tqdm(df.iterrows(), total=df.shape[0]):
 ## Fix `libstdc++.so.6: version 'GLIBCXX_3.4.29' not found` issue
 You could type in the following in your shell, or add into your rc file:
 ```bash
-find /path/to/your/env -name libstdc++.so.6`
+find /path/to/your/env -name libstdc++.so.6
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/your/env/lib
 ```
 
@@ -202,4 +202,9 @@ Bare bones of packaging a project, but still basing on 2024 standards.
 ```python
 cols = ['foo', 'bar', 'viz']
 df['combined'] = df[cols].apply(lambda row: '_'.join(row.values.astype(str)), axis=1)
+```
+
+## Remove boundaries from a `matplotlib.pyplot.Axes` object
+```python
+ax.spines[['top', 'right']].set_visible(False)
 ```
